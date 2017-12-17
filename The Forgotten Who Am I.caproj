@@ -96,11 +96,15 @@
                         <file-folder name="Dog" />
                         <file-folder name="Daughter" />
                     </file-folder>
-                    <file-folder name="Player" />
+                    <file-folder name="Player">
+                        <file name="Sprite PC 1.png" />
+                    </file-folder>
                 </file-folder>
                 <file-folder name="Enemy" />
             </file-folder>
-            <file-folder name="Background" />
+            <file-folder name="Background">
+                <file name="Backdrop.png" />
+            </file-folder>
             <file-folder name="Tiles" />
         </file-folder>
     </files-folder>
