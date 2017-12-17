@@ -100,7 +100,9 @@
                         <file name="Sprite PC 1.png" />
                     </file-folder>
                 </file-folder>
-                <file-folder name="Enemy" />
+                <file-folder name="Enemy">
+                    <file name="FB Sprite 1.png" />
+                </file-folder>
             </file-folder>
             <file-folder name="Background">
                 <file name="Backdrop.png" />
