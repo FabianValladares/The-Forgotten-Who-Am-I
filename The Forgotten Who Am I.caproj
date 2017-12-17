@@ -1,0 +1,107 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2project>
+    <name>The Forgotten Who Am I</name>
+    <description></description>
+    <version>1.0.0.0</version>
+    <author></author>
+    <author-email></author-email>
+    <author-website>http://</author-website>
+    <app-id>com.mycompany.myapp</app-id>
+    <unique-id>3g2vniituxowv</unique-id>
+    <saved-with-version>24400</saved-with-version>
+    <used-plugins />
+    <used-behaviors />
+    <used-effects />
+    <configurations>
+        <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
+    </configurations>
+    <window-size>
+        <width>854</width>
+        <height>480</height>
+    </window-size>
+    <pixel-rounding>0</pixel-rounding>
+    <preview-effects>1</preview-effects>
+    <use-loader-layout>0</use-loader-layout>
+    <configuration-settings>
+        <prop name="Clear background">Yes</prop>
+        <prop name="Downscaling">Medium quality</prop>
+        <prop name="Enable WebGL">On</prop>
+        <prop name="Fullscreen in browser">Letterbox scale</prop>
+        <prop name="Fullscreen scaling">High quality</prop>
+        <prop name="Loader style">Construct 2 splash</prop>
+        <prop name="Orientations">Any</prop>
+        <prop name="Pause on unfocus">No</prop>
+        <prop name="Physics engine">Box2D asm.js</prop>
+        <prop name="Preload sounds">Yes</prop>
+        <prop name="Preview browser">(default)</prop>
+        <prop name="Sampling">Linear</prop>
+        <prop name="Use high-DPI display">Yes</prop>
+    </configuration-settings>
+    <object-folder>
+        <object-folder name="Sprites">
+            <object-folder name="Player" />
+            <object-folder name="Enemy">
+                <object-folder name="Final Boss" />
+            </object-folder>
+        </object-folder>
+        <object-folder name="Background" />
+    </object-folder>
+    <families />
+    <layout-folder>
+        <layout-folder name="Level 1">
+            <layout>Layout 1.xml</layout>
+        </layout-folder>
+        <layout-folder name="Main Menu" />
+        <layout-folder name="Ending Screen" />
+        <layout-folder name="Game Over" />
+    </layout-folder>
+    <event-folder>
+        <event-sheet>Event sheet 1.xml</event-sheet>
+    </event-folder>
+    <global-instances />
+    <sounds-folder>
+        <sound-folder name="Enemy">
+            <sound-folder name="Attack" />
+            <sound-folder name="Death" />
+            <sound-folder name="BattleCry" />
+        </sound-folder>
+        <sound-folder name="Item Interaction" />
+        <sound-folder name="Player">
+            <sound-folder name="Death" />
+            <sound-folder name="Attack" />
+            <sound-folder name="Block" />
+            <sound-folder name="Walk" />
+            <sound-folder name="Parry" />
+        </sound-folder>
+    </sounds-folder>
+    <music-folder>
+        <music-folder name="Background" />
+        <music-folder name="Final Boss OST" />
+        <music-folder name="Ending OST" />
+        <music-folder name="Game Over OST" />
+    </music-folder>
+    <files-folder>
+        <file-folder name="Icons">
+            <file name="icon-16.png" />
+            <file name="icon-32.png" />
+            <file name="icon-114.png" />
+            <file name="icon-128.png" />
+            <file name="icon-256.png" />
+            <file name="loading-logo.png" />
+        </file-folder>
+        <file-folder name="Resources">
+            <file-folder name="Character Assets">
+                <file-folder name="Character">
+                    <file-folder name="NPC">
+                        <file-folder name="Dog" />
+                        <file-folder name="Daughter" />
+                    </file-folder>
+                    <file-folder name="Player" />
+                </file-folder>
+                <file-folder name="Enemy" />
+            </file-folder>
+            <file-folder name="Background" />
+            <file-folder name="Tiles" />
+        </file-folder>
+    </files-folder>
+</c2project>
