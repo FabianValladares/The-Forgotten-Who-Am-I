@@ -11,9 +11,12 @@
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+        <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
+        <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
     <used-effects />
     <configurations>
@@ -49,6 +52,9 @@
                     <behaviors>
                         <behavior-type name="Platform" sid="578741433034601">
                             <behavior id="Platform" />
+                        </behavior-type>
+                        <behavior-type name="ScrollTo" sid="141519254002042">
+                            <behavior id="scrollto" />
                         </behavior-type>
                     </behaviors>
                     <animation-folder>
@@ -101,6 +107,116 @@
                 </animation-folder>
             </object-type>
         </object-folder>
+        <object-type name="GroundTexture" sid="408470191369682">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="709118068679238" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground" sid="918449559370467">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="992997566368371">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+        </object-type>
+        <object-type name="UIHP" sid="973122042102740">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="318331342110466" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI HP.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.18" />
+                            <point x="0.5" y="0.28" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.84" y="0.5" />
+                            <point x="0.66" y="0.66" />
+                            <point x="0.5" y="0.78" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.12" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UIHP1" sid="575886880818075">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="338636051811429" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI HP.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.18" />
+                            <point x="0.5" y="0.28" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.84" y="0.5" />
+                            <point x="0.66" y="0.66" />
+                            <point x="0.5" y="0.78" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.12" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UIHP2" sid="379282331721818">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="680187733026011" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI HP.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.18" />
+                            <point x="0.5" y="0.28" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.84" y="0.5" />
+                            <point x="0.66" y="0.66" />
+                            <point x="0.5" y="0.78" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.12" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="UIHP3" sid="822264576058380">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="363131151495987" speed="5">
+                    <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI HP.png">
+                        <collision-poly>
+                            <point x="0.18" y="0.18" />
+                            <point x="0.5" y="0.28" />
+                            <point x="0.8" y="0.2" />
+                            <point x="0.84" y="0.5" />
+                            <point x="0.66" y="0.66" />
+                            <point x="0.5" y="0.78" />
+                            <point x="0.32" y="0.68" />
+                            <point x="0.12" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="TiledBackground2" sid="189837349974966">
+            <plugin id="TiledBg" />
+            <texture />
+        </object-type>
+        <object-type name="TiledBackground3" sid="557296358970825">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="500212489085313">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+        </object-type>
+        <object-type name="TiledBackground4" sid="784545134250496">
+            <plugin id="TiledBg" />
+            <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
@@ -164,9 +280,6 @@
                 <file name="Backdrop.png" />
                 <file name="Background02.png" />
             </file-folder>
-<<<<<<< HEAD
-            <file-folder name="Tiles" />
-=======
             <file-folder name="Tiles">
                 <file name="GroundTexture.png" />
             </file-folder>
@@ -176,7 +289,6 @@
                 <file name="UI Item 2.png" />
                 <file name="UI Item 3.png" />
             </file-folder>
->>>>>>> 666f3e8cbf5edc7e3dbc42aa76580cc21597acf3
         </file-folder>
     </files-folder>
 </c2project>
