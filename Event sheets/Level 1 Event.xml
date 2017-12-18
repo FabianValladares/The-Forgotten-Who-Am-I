@@ -1,0 +1,294 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Level 1 Event</name>
+    <events>
+        <variable constant="0" name="IsGameOver" sid="838405308848181" static="0" type="text">false</variable>
+        <variable constant="0" name="Lives" sid="528028626302984" static="0" type="number">3</variable>
+        <event-group description="" sid="888516206900841" title="Back End Game Variables">
+            <sub-events>
+                <event-group description="" sid="453345567274906" title="Final Boss">
+                    <sub-events>
+                        <event-block sid="204151917086548">
+                            <conditions>
+                                <condition id="-3" name="Is on-screen" sid="241739860044293" type="Sprite3" />
+                            </conditions>
+                            <actions>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="919431657127460" type="InvisibleWallBoss">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action behavior="Solid" id="0" name="Set enabled" sid="844926130337255" type="InvisibleWallBoss2">
+                                    <param id="0" name="State">1</param>
+                                </action>
+                                <action id="-16" name="Wait" sid="978502116853934" type="System">
+                                    <param id="0" name="Seconds">1.0</param>
+                                </action>
+                                <action behavior="ScrollTo" id="1" name="Set enabled" sid="169790213291387" type="Sprite">
+                                    <param id="0" name="State">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="666877113063023" title="Movement">
+                    <sub-events>
+                        <event-block sid="522584789469594">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="621046827981065" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="581279583691692" type="Sprite">
+                                    <param id="0" name="Animation">&quot;Right&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="803260181133758">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="463730443968982" type="Keyboard">
+                                    <param id="0" name="Key">39 (Right arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="344860046877630" type="Sprite">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="504144039836722">
+                            <conditions>
+                                <condition id="2" name="Key is down" sid="211045368650489" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="697625985912461" type="Sprite">
+                                    <param id="0" name="Animation">&quot;Left&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="126100485591154">
+                            <conditions>
+                                <condition id="3" name="On key released" sid="823867112549878" type="Keyboard">
+                                    <param id="0" name="Key">37 (Left arrow)</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="4" name="Set animation" sid="662796230450776" type="Sprite">
+                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="1" name="From">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="214489036890252" title="Lives">
+                    <sub-events>
+                        <event-block sid="519366786948074">
+                            <conditions>
+                                <condition id="0" name="On collision with another object" sid="589169287602394" type="Sprite">
+                                    <param id="0" name="Object">Sprite3</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Flash" id="0" name="Flash" sid="951145005436154" type="Sprite">
+                                    <param id="0" name="&apos;On&apos; time">0.2</param>
+                                    <param id="1" name="&apos;Off&apos; time">0.2</param>
+                                    <param id="2" name="Duration">1.0</param>
+                                </action>
+                                <action id="-11" name="Subtract from" sid="203846248216505" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Value">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+                <event-group description="" sid="403639813728122" title="Starting layout">
+                    <sub-events>
+                        <event-block sid="533301279205231">
+                            <conditions>
+                                <condition id="-2" name="On start of layout" sid="472739628631716" type="System" />
+                            </conditions>
+                            <actions>
+                                <action id="-4" name="Set layer visible" sid="864644106017143" type="System">
+                                    <param id="0" name="Layer">3</param>
+                                    <param id="1" name="Visibility">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                    </sub-events>
+                </event-group>
+            </sub-events>
+        </event-group>
+        <event-block sid="955371602184647">
+            <conditions>
+                <condition id="3" name="On key released" sid="270349944282108" type="Keyboard">
+                    <param id="0" name="Key">65 (A)</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="138417968298552" type="Sprite">
+                    <param id="0" name="Animation">&quot;attack&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+                <action id="-16" name="Wait" sid="223946509091581" type="System">
+                    <param id="0" name="Seconds">0.5</param>
+                </action>
+                <action id="4" name="Set animation" sid="885122238112178" type="Sprite">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">1</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block any="1" sid="236170724386390">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="100344916322803" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">2</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="484934331119089" type="UIHP3" />
+            </actions>
+        </event-block>
+        <event-block sid="852622693016145">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="232379190209352" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">1</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="562679803365099" type="UIHP2" />
+            </actions>
+        </event-block>
+        <event-block sid="855874694751544">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="665907119410664" type="System">
+                    <param id="0" name="Variable">Lives</param>
+                    <param id="1" name="Comparison">3</param>
+                    <param id="2" name="Value">0</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="538958772719914" type="UIHP1" />
+                <action id="-9" name="Set value" sid="564832373025902" type="System">
+                    <param id="0" name="Variable">IsGameOver</param>
+                    <param id="1" name="Value">&quot;true&quot;</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="513753106715181">
+            <conditions>
+                <condition id="-14" name="Compare variable" sid="872571751362040" type="System">
+                    <param id="0" name="Variable">IsGameOver</param>
+                    <param id="1" name="Comparison">0</param>
+                    <param id="2" name="Value">&quot;true&quot;</param>
+                </condition>
+            </conditions>
+            <actions>
+                <action id="-9" name="Destroy" sid="824785817635091" type="Sprite" />
+                <action id="-4" name="Set layer visible" sid="372851257399706" type="System">
+                    <param id="0" name="Layer">3</param>
+                    <param id="1" name="Visibility">1</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="454267111969483" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">0</param>
+                    <param id="3" name="Value">70</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="710319646693484" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">40</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="988420791629264" type="System">
+                    <param id="0" name="Layer">0</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">2</param>
+                    <param id="3" name="Value">30</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="169330892387796" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">0</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="971175005317800" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">1</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+                <action id="-32" name="Set layer effect parameter" sid="418495885129267" type="System">
+                    <param id="0" name="Layer">2</param>
+                    <param id="1" name="Effect">&quot;Tint&quot;</param>
+                    <param id="2" name="Parameter index">2</param>
+                    <param id="3" name="Value">0</param>
+                </action>
+            </actions>
+            <sub-events>
+                <event-block sid="512459804100453">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="809391230321635" type="Keyboard">
+                            <param id="0" name="Key">32 (Space)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="-21" name="Reset global variables" sid="319562619549663" type="System" />
+                        <action id="-26" name="Restart layout" sid="164630957926060" type="System" />
+                        <action id="-32" name="Set layer effect parameter" sid="865511167995171" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="651391759140072" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">1</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="532763822153782" type="System">
+                            <param id="0" name="Layer">0</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">2</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="302980787112808" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">0</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="837907823319913" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">1</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                        <action id="-32" name="Set layer effect parameter" sid="123464383217070" type="System">
+                            <param id="0" name="Layer">2</param>
+                            <param id="1" name="Effect">&quot;Tint&quot;</param>
+                            <param id="2" name="Parameter index">2</param>
+                            <param id="3" name="Value">127.5</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-block>
+        <event-block sid="448759732639492">
+            <conditions />
+            <actions />
+        </event-block>
+    </events>
+</c2eventsheet>

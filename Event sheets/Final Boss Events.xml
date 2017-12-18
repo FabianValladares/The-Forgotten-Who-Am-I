@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<c2eventsheet>
+    <!--All the 'name' attributes are ignored by Construct 2 - they are there for readability only.-->
+    <name>Final Boss Events</name>
+    <events>
+        <event-block sid="776706504044018">
+            <conditions />
+            <actions />
+        </event-block>
+        <event-group description="" sid="972314406653629" title="Final Boss Movement">
+            <sub-events>
+                <event-block sid="311962282270801">
+                    <conditions>
+                        <condition id="-3" name="Is on-screen" sid="309143858493697" type="Sprite3" />
+                    </conditions>
+                    <actions>
+                        <action id="-16" name="Wait" sid="505033529343338" type="System">
+                            <param id="0" name="Seconds">2</param>
+                        </action>
+                    </actions>
+                </event-block>
+            </sub-events>
+        </event-group>
+    </events>
+</c2eventsheet>

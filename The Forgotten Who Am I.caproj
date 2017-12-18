@@ -10,15 +10,20 @@
     <unique-id>3g2vniituxowv</unique-id>
     <saved-with-version>24400</saved-with-version>
     <used-plugins>
+        <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+        <plugin author="Scirra" id="Text" version="1">Text</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
     </used-behaviors>
-    <used-effects />
+    <used-effects>
+        <effect author="Scirra" id="tint">Tint</effect>
+    </used-effects>
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
@@ -56,6 +61,9 @@
                         <behavior-type name="ScrollTo" sid="141519254002042">
                             <behavior id="scrollto" />
                         </behavior-type>
+                        <behavior-type name="Flash" sid="858382363300513">
+                            <behavior id="Flash" />
+                        </behavior-type>
                     </behaviors>
                     <animation-folder>
                         <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492908531791726" speed="5">
@@ -72,11 +80,233 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="3" loop="0" name="Attack" pingpong="0" repeatcount="1" repeatto="0" sid="617589655968096" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_1a.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.5" y="0.23" />
+                                    <point x="0.53" y="0.235" />
+                                    <point x="0.55" y="0.5" />
+                                    <point x="0.67" y="0.835" />
+                                    <point x="0.5" y="0.97" />
+                                    <point x="0.35" y="0.825" />
+                                    <point x="0.27" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_1b.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.5" y="0.23" />
+                                    <point x="0.53" y="0.235" />
+                                    <point x="0.52" y="0.5" />
+                                    <point x="0.73" y="0.865" />
+                                    <point x="0.5" y="0.97" />
+                                    <point x="0.35" y="0.825" />
+                                    <point x="0.27" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_1a.png">
+                                <collision-poly>
+                                    <point x="0.5" y="0.25" />
+                                    <point x="0.5" y="0.23" />
+                                    <point x="0.53" y="0.235" />
+                                    <point x="0.55" y="0.5" />
+                                    <point x="0.67" y="0.835" />
+                                    <point x="0.5" y="0.97" />
+                                    <point x="0.35" y="0.825" />
+                                    <point x="0.27" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="418343670606288" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_2b.png">
+                                <collision-poly>
+                                    <point x="0.24" y="0.12" />
+                                    <point x="0.5" y="0.04" />
+                                    <point x="0.6" y="0.2" />
+                                    <point x="0.6" y="0.5" />
+                                    <point x="0.64" y="0.82" />
+                                    <point x="0.5" y="0.885" />
+                                    <point x="0.22" y="0.89" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_2a.png">
+                                <collision-poly>
+                                    <point x="0.24" y="0.12" />
+                                    <point x="0.5" y="0.04" />
+                                    <point x="0.6" y="0.2" />
+                                    <point x="0.6" y="0.5" />
+                                    <point x="0.65" y="0.825" />
+                                    <point x="0.5" y="0.88" />
+                                    <point x="0.22" y="0.89" />
+                                    <point x="0.29" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                        <animation framecount="2" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="539625455790543" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.71" y="0.5" />
+                                    <point x="0.78" y="0.89" />
+                                    <point x="0.5" y="0.88" />
+                                    <point x="0.35" y="0.825" />
+                                    <point x="0.4" y="0.5" />
+                                    <point x="0.4" y="0.2" />
+                                    <point x="0.5" y="0.04" />
+                                    <point x="0.76" y="0.12" />
+                                </collision-poly>
+                            </frame>
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.78" y="0.89" />
+                                    <point x="0.5" y="0.885" />
+                                    <point x="0.36" y="0.82" />
+                                    <point x="0.4" y="0.5" />
+                                    <point x="0.4" y="0.2" />
+                                    <point x="0.5" y="0.04" />
+                                    <point x="0.76" y="0.12" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
             <object-folder name="Enemy">
-                <object-folder name="Final Boss" />
+                <object-folder name="Final Boss">
+                    <object-type name="Sprite3" sid="667376670663832">
+                        <plugin id="Sprite" />
+                        <instance-variables>
+                            <instance-variable name="Right" sid="154713410083511" type="boolean" />
+                            <instance-variable name="left" sid="660168016493919" type="boolean" />
+                            <instance-variable name="Shoot" sid="277355817783961" type="number" />
+                        </instance-variables>
+                        <behaviors>
+                            <behavior-type name="Platform" sid="683072340344913">
+                                <behavior id="Platform" />
+                            </behavior-type>
+                        </behaviors>
+                        <animation-folder>
+                            <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="723117320993688" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB Sprite 1.png">
+                                    <collision-poly>
+                                        <point x="0.42" y="0.21" />
+                                        <point x="0.5" y="0.196667" />
+                                        <point x="0.693333" y="0.153333" />
+                                        <point x="0.98" y="0.5" />
+                                        <point x="0.813333" y="0.906667" />
+                                        <point x="0.5" y="0.776667" />
+                                        <point x="0.233333" y="0.883333" />
+                                        <point x="0.04" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="Left" pingpong="0" repeatcount="1" repeatto="0" sid="745401650534042" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB_Sprite_2a.png">
+                                    <collision-poly>
+                                        <point x="0.266667" y="0.133333" />
+                                        <point x="0.5" y="0.11" />
+                                        <point x="0.64" y="0.18" />
+                                        <point x="0.993333" y="0.5" />
+                                        <point x="0.806667" y="0.903333" />
+                                        <point x="0.5" y="0.866667" />
+                                        <point x="0.206667" y="0.896667" />
+                                        <point x="0.22" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB_Sprite_2b.png">
+                                    <collision-poly>
+                                        <point x="0.24" y="0.12" />
+                                        <point x="0.5" y="0.06" />
+                                        <point x="0.573333" y="0.213333" />
+                                        <point x="0.966667" y="0.5" />
+                                        <point x="0.813333" y="0.906667" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.206667" y="0.896667" />
+                                        <point x="0.2" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="Right" pingpong="0" repeatcount="1" repeatto="0" sid="645785098769161" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.8" y="0.5" />
+                                        <point x="0.793333" y="0.896667" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.186667" y="0.906667" />
+                                        <point x="0.0333334" y="0.5" />
+                                        <point x="0.426667" y="0.213333" />
+                                        <point x="0.5" y="0.06" />
+                                        <point x="0.76" y="0.12" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.78" y="0.5" />
+                                        <point x="0.793333" y="0.896667" />
+                                        <point x="0.5" y="0.866667" />
+                                        <point x="0.193333" y="0.903333" />
+                                        <point x="0.00666666" y="0.5" />
+                                        <point x="0.36" y="0.18" />
+                                        <point x="0.5" y="0.11" />
+                                        <point x="0.733333" y="0.133333" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="AttackLeft" pingpong="0" repeatcount="1" repeatto="0" sid="423418337647961" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB_Sprite_1b.png">
+                                    <collision-poly>
+                                        <point x="0.5" y="0.25" />
+                                        <point x="0.5" y="0.246667" />
+                                        <point x="0.6" y="0.2" />
+                                        <point x="0.98" y="0.5" />
+                                        <point x="0.806667" y="0.903333" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.266667" y="0.866667" />
+                                        <point x="0.2" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB_Sprite_1c.png">
+                                    <collision-poly>
+                                        <point x="0.466667" y="0.233333" />
+                                        <point x="0.5" y="0.213333" />
+                                        <point x="0.686667" y="0.156667" />
+                                        <point x="0.966667" y="0.5" />
+                                        <point x="0.84" y="0.92" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.28" y="0.86" />
+                                        <point x="0.14" y="0.5" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                            <animation framecount="2" loop="0" name="AttackRight" pingpong="0" repeatcount="1" repeatto="0" sid="777297913256644" speed="5">
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.8" y="0.5" />
+                                        <point x="0.733333" y="0.866667" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.193333" y="0.903333" />
+                                        <point x="0.02" y="0.5" />
+                                        <point x="0.4" y="0.2" />
+                                        <point x="0.5" y="0.246667" />
+                                        <point x="0.5" y="0.25" />
+                                    </collision-poly>
+                                </frame>
+                                <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <collision-poly>
+                                        <point x="0.86" y="0.5" />
+                                        <point x="0.72" y="0.86" />
+                                        <point x="0.5" y="0.98" />
+                                        <point x="0.16" y="0.92" />
+                                        <point x="0.0333334" y="0.5" />
+                                        <point x="0.313333" y="0.156667" />
+                                        <point x="0.5" y="0.213333" />
+                                        <point x="0.533333" y="0.233333" />
+                                    </collision-poly>
+                                </frame>
+                            </animation>
+                        </animation-folder>
+                    </object-type>
+                </object-folder>
             </object-folder>
         </object-folder>
         <object-folder name="Background">
@@ -105,6 +335,9 @@
                         </frame>
                     </animation>
                 </animation-folder>
+            </object-type>
+            <object-type name="Keyboard" sid="513810196966811">
+                <plugin id="Keyboard" />
             </object-type>
         </object-folder>
         <object-type name="GroundTexture" sid="408470191369682">
@@ -217,20 +450,150 @@
             <plugin id="TiledBg" />
             <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
         </object-type>
+        <object-type name="Sprite2" sid="516669966853035">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="239835630368205" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="InvisibleWallBoss" sid="175434589509367">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="IsSolid" sid="886927241022284" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="792934092000408">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+        </object-type>
+        <object-type name="InvisibleWallBoss2" sid="644893925053448">
+            <plugin id="TiledBg" />
+            <instance-variables>
+                <instance-variable name="IsSolid" sid="841985064484850" type="boolean" />
+            </instance-variables>
+            <behaviors>
+                <behavior-type name="Solid" sid="667625775714345">
+                    <behavior id="solid" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\GroundTexture.png" />
+        </object-type>
+        <object-type name="Sprite_PC_1a" sid="137856457214843">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="2" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="684213349121378" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_1a.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.5" y="0.23" />
+                            <point x="0.53" y="0.235" />
+                            <point x="0.55" y="0.5" />
+                            <point x="0.67" y="0.835" />
+                            <point x="0.5" y="0.97" />
+                            <point x="0.35" y="0.825" />
+                            <point x="0.27" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite_PC_1b.png">
+                        <collision-poly>
+                            <point x="0.5" y="0.25" />
+                            <point x="0.5" y="0.23" />
+                            <point x="0.53" y="0.235" />
+                            <point x="0.52" y="0.5" />
+                            <point x="0.73" y="0.865" />
+                            <point x="0.5" y="0.97" />
+                            <point x="0.35" y="0.825" />
+                            <point x="0.27" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text" sid="886397113925577">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Text2" sid="578801805867802">
+            <plugin id="Text" />
+        </object-type>
+        <object-type name="Sprite4" sid="152072036814014">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="210435266065374" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI Item 1.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.12" />
+                            <point x="0.5" y="0.64" />
+                            <point x="0.46" y="0.54" />
+                            <point x="0.44" y="0.5" />
+                            <point x="0.84" y="0.84" />
+                            <point x="0.5" y="0.78" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite5" sid="907178451984943">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="681736610801575" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI Item 2.png">
+                        <collision-poly>
+                            <point x="0.44" y="0.44" />
+                            <point x="0.5" y="0.2" />
+                            <point x="0.84" y="0.16" />
+                            <point x="0.62" y="0.5" />
+                            <point x="0.66" y="0.66" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0.3" y="0.7" />
+                            <point x="0.28" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite6" sid="996683229983130">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="966528692069009" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI Item 3.png">
+                        <collision-poly>
+                            <point x="0.32" y="0.32" />
+                            <point x="0.5" y="0.26" />
+                            <point x="0.74" y="0.26" />
+                            <point x="0.76" y="0.5" />
+                            <point x="0.7" y="0.7" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0.28" y="0.72" />
+                            <point x="0.24" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
     </object-folder>
     <families />
     <layout-folder>
         <layout-folder name="Level 1">
             <layout>Layout 1.xml</layout>
         </layout-folder>
-        <layout-folder name="Main Menu" />
+        <layout-folder name="Main Menu">
+            <layout>Main Menu.xml</layout>
+        </layout-folder>
         <layout-folder name="Ending Screen" />
         <layout-folder name="Game Over" />
     </layout-folder>
     <event-folder>
-        <event-sheet>Event sheet 1.xml</event-sheet>
+        <event-sheet>Level 1 Event.xml</event-sheet>
+        <event-sheet>Final Boss Events.xml</event-sheet>
+        <event-sheet>Main Menu Event.xml</event-sheet>
     </event-folder>
-    <global-instances />
+    <global-instances>
+        <global-instance type="Keyboard" uid="16" />
+    </global-instances>
     <sounds-folder>
         <sound-folder name="Enemy">
             <sound-folder name="Attack" />
