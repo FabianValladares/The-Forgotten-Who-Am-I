@@ -9,15 +9,19 @@
     <app-id>com.mycompany.myapp</app-id>
     <unique-id>3g2vniituxowv</unique-id>
     <saved-with-version>24400</saved-with-version>
-    <used-plugins />
-    <used-behaviors />
+    <used-plugins>
+        <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
+    </used-plugins>
+    <used-behaviors>
+        <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
+    </used-behaviors>
     <used-effects />
     <configurations>
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>854</width>
-        <height>480</height>
+        <width>1138</width>
+        <height>640</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -39,12 +43,64 @@
     </configuration-settings>
     <object-folder>
         <object-folder name="Sprites">
-            <object-folder name="Player" />
+            <object-folder name="Player">
+                <object-type name="Sprite" sid="665770188509981">
+                    <plugin id="Sprite" />
+                    <behaviors>
+                        <behavior-type name="Platform" sid="578741433034601">
+                            <behavior id="Platform" />
+                        </behavior-type>
+                    </behaviors>
+                    <animation-folder>
+                        <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="492908531791726" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Sprite PC 1.png">
+                                <collision-poly>
+                                    <point x="0.27" y="0.135" />
+                                    <point x="0.5" y="0.035" />
+                                    <point x="0.68" y="0.16" />
+                                    <point x="0.72" y="0.5" />
+                                    <point x="0.66" y="0.83" />
+                                    <point x="0.5" y="0.91" />
+                                    <point x="0.31" y="0.845" />
+                                    <point x="0.31" y="0.5" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
+                    </animation-folder>
+                </object-type>
+            </object-folder>
             <object-folder name="Enemy">
                 <object-folder name="Final Boss" />
             </object-folder>
         </object-folder>
-        <object-folder name="Background" />
+        <object-folder name="Background">
+            <object-type name="Backdrop" sid="287756536443394">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="408550597349815" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Backdrop.png" />
+                    </animation>
+                </animation-folder>
+            </object-type>
+            <object-type name="Background" sid="694412599529945">
+                <plugin id="Sprite" />
+                <animation-folder>
+                    <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="298238993547408" speed="5">
+                        <frame duration="1" hotspotX="0" hotspotY="0" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Background02.png">
+                            <collision-poly>
+                                <point x="0.0799649" y="0.142188" />
+                                <point x="0.5" y="0.84375" />
+                                <point x="0.947276" y="0.09375" />
+                                <point x="0.940246" y="0.5" />
+                                <point x="1" y="1" />
+                                <point x="0" y="1" />
+                                <point x="0.0790861" y="0.5" />
+                            </collision-poly>
+                        </frame>
+                    </animation>
+                </animation-folder>
+            </object-type>
+        </object-folder>
     </object-folder>
     <families />
     <layout-folder>
@@ -106,14 +162,9 @@
             </file-folder>
             <file-folder name="Background">
                 <file name="Backdrop.png" />
+                <file name="Background02.png" />
             </file-folder>
             <file-folder name="Tiles" />
-            <file-folder name="UI Hud">
-                <file name="UI HP.png" />
-                <file name="UI Item 1.png" />
-                <file name="UI Item 2.png" />
-                <file name="UI Item 3.png" />
-            </file-folder>
         </file-folder>
     </files-folder>
 </c2project>
