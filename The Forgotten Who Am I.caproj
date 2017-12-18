@@ -107,7 +107,9 @@
             <file-folder name="Background">
                 <file name="Backdrop.png" />
             </file-folder>
-            <file-folder name="Tiles" />
+            <file-folder name="Tiles">
+                <file name="GroundTexture.png" />
+            </file-folder>
             <file-folder name="UI Hud">
                 <file name="UI HP.png" />
                 <file name="UI Item 1.png" />
