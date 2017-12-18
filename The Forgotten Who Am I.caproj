@@ -164,7 +164,19 @@
                 <file name="Backdrop.png" />
                 <file name="Background02.png" />
             </file-folder>
+<<<<<<< HEAD
             <file-folder name="Tiles" />
+=======
+            <file-folder name="Tiles">
+                <file name="GroundTexture.png" />
+            </file-folder>
+            <file-folder name="UI Hud">
+                <file name="UI HP.png" />
+                <file name="UI Item 1.png" />
+                <file name="UI Item 2.png" />
+                <file name="UI Item 3.png" />
+            </file-folder>
+>>>>>>> 666f3e8cbf5edc7e3dbc42aa76580cc21597acf3
         </file-folder>
     </files-folder>
 </c2project>
