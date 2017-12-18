@@ -11,7 +11,7 @@
             <sub-events>
                 <event-block sid="311962282270801">
                     <conditions>
-                        <condition id="-3" name="Is on-screen" sid="309143858493697" type="Sprite3" />
+                        <condition id="-3" name="Is on-screen" sid="309143858493697" type="FinalBoss" />
                     </conditions>
                     <actions>
                         <action id="-16" name="Wait" sid="505033529343338" type="System">

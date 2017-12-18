@@ -16,7 +16,9 @@
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
     </used-plugins>
     <used-behaviors>
+        <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
         <behavior author="Scirra" id="Flash" version="1">Flash</behavior>
+        <behavior author="Scirra" id="LOS" version="1">Line Of Sight</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
         <behavior author="Scirra" id="solid" version="1">Solid</behavior>
@@ -168,21 +170,37 @@
                                 </collision-poly>
                             </frame>
                         </animation>
+                        <animation framecount="1" loop="0" name="DefaultL" pingpong="0" repeatcount="1" repeatto="0" sid="585621732657617" speed="5">
+                            <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                <collision-poly>
+                                    <point x="0.69" y="0.5" />
+                                    <point x="0.69" y="0.845" />
+                                    <point x="0.5" y="0.91" />
+                                    <point x="0.34" y="0.83" />
+                                    <point x="0.28" y="0.5" />
+                                    <point x="0.32" y="0.16" />
+                                    <point x="0.5" y="0.035" />
+                                    <point x="0.73" y="0.135" />
+                                </collision-poly>
+                            </frame>
+                        </animation>
                     </animation-folder>
                 </object-type>
             </object-folder>
             <object-folder name="Enemy">
                 <object-folder name="Final Boss">
-                    <object-type name="Sprite3" sid="667376670663832">
+                    <object-type name="FinalBoss" sid="667376670663832">
                         <plugin id="Sprite" />
                         <instance-variables>
-                            <instance-variable name="Right" sid="154713410083511" type="boolean" />
-                            <instance-variable name="left" sid="660168016493919" type="boolean" />
                             <instance-variable name="Shoot" sid="277355817783961" type="number" />
+                            <instance-variable name="Patrol" sid="412119343589059" type="number" />
                         </instance-variables>
                         <behaviors>
                             <behavior-type name="Platform" sid="683072340344913">
                                 <behavior id="Platform" />
+                            </behavior-type>
+                            <behavior-type name="LineOfSight" sid="810843950019379">
+                                <behavior id="LOS" />
                             </behavior-type>
                         </behaviors>
                         <animation-folder>
@@ -266,6 +284,7 @@
                                     </collision-poly>
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\FB_Sprite_1c.png">
+                                    <image-point name="Void" x="0.02" y="0.573333" />
                                     <collision-poly>
                                         <point x="0.466667" y="0.233333" />
                                         <point x="0.5" y="0.213333" />
@@ -292,6 +311,7 @@
                                     </collision-poly>
                                 </frame>
                                 <frame duration="1" hotspotX="0.5" hotspotY="0.5">
+                                    <image-point name="Void" x="1" y="0.573333" />
                                     <collision-poly>
                                         <point x="0.86" y="0.5" />
                                         <point x="0.72" y="0.86" />
@@ -573,6 +593,58 @@
                     </frame>
                 </animation>
             </animation-folder>
+        </object-type>
+        <object-type name="Sprite3" sid="297116492374248">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="333883853293451" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite7" sid="884869963202048">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="Bullet" sid="316898439347571">
+                    <behavior id="Bullet" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="695520635141121" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.52" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\Orb1.png">
+                        <collision-poly>
+                            <point x="0.175" y="0.28" />
+                            <point x="0.5" y="0.16" />
+                            <point x="0.6" y="0.64" />
+                            <point x="0.65" y="0.48" />
+                            <point x="0.6" y="0.36" />
+                            <point x="0.5" y="0.8" />
+                            <point x="0.175" y="0.72" />
+                            <point x="0.1" y="0.48" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Sprite8" sid="273926971782017">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="930386519521151" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\The Forgotten Who Am I\The-Forgotten-Who-Am-I\Files\UI Item 1.png">
+                        <collision-poly>
+                            <point x="0.12" y="0.12" />
+                            <point x="0.5" y="0.64" />
+                            <point x="0.46" y="0.54" />
+                            <point x="0.44" y="0.5" />
+                            <point x="0.84" y="0.84" />
+                            <point x="0.5" y="0.78" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="Text3" sid="278976221419113">
+            <plugin id="Text" />
         </object-type>
     </object-folder>
     <families />

@@ -9,9 +9,47 @@
             <sub-events>
                 <event-group description="" sid="453345567274906" title="Final Boss">
                     <sub-events>
+                        <event-block sid="265325878262760">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="522847952589034" type="FinalBoss">
+                                    <param id="0" name="Instance variable">Patrol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="166753382071072" type="FinalBoss">
+                                    <param id="0" name="Control">1</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="294654636684887">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="602055847664111" type="FinalBoss">
+                                    <param id="0" name="Instance variable">Patrol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action behavior="Platform" id="7" name="Simulate control" sid="114875337746193" type="FinalBoss">
+                                    <param id="0" name="Control">0</param>
+                                </action>
+                            </actions>
+                        </event-block>
+                        <event-block sid="308963990613915">
+                            <conditions>
+                                <condition id="-7" name="Compare instance variable" sid="386509550835942" type="FinalBoss">
+                                    <param id="0" name="Instance variable">Patrol</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions />
+                        </event-block>
                         <event-block sid="204151917086548">
                             <conditions>
-                                <condition id="-3" name="Is on-screen" sid="241739860044293" type="Sprite3" />
+                                <condition id="-3" name="Is on-screen" sid="241739860044293" type="FinalBoss" />
                             </conditions>
                             <actions>
                                 <action behavior="Solid" id="0" name="Set enabled" sid="919431657127460" type="InvisibleWallBoss">
@@ -21,15 +59,131 @@
                                     <param id="0" name="State">1</param>
                                 </action>
                                 <action id="-16" name="Wait" sid="978502116853934" type="System">
-                                    <param id="0" name="Seconds">1.0</param>
+                                    <param id="0" name="Seconds">2.0</param>
                                 </action>
                                 <action behavior="ScrollTo" id="1" name="Set enabled" sid="169790213291387" type="Sprite">
                                     <param id="0" name="State">0</param>
                                 </action>
                             </actions>
+                            <sub-events>
+                                <event-block sid="442804235846623">
+                                    <conditions>
+                                        <condition behavior="LineOfSight" id="0" name="Has LOS to object" sid="678638808763399" type="FinalBoss">
+                                            <param id="0" name="Object">Sprite</param>
+                                        </condition>
+                                    </conditions>
+                                    <actions />
+                                    <sub-events>
+                                        <event-block sid="819144662481341">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="202773898671583" type="Sprite">
+                                                    <param id="0" name="Comparison">2</param>
+                                                    <param id="1" name="X co-ordinate">FinalBoss.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="204205442346481" type="FinalBoss">
+                                                    <param id="0" name="Instance variable">Patrol</param>
+                                                    <param id="1" name="Value">2</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="496030758056035">
+                                            <conditions>
+                                                <condition id="-1" name="Compare X" sid="686630880084532" type="Sprite">
+                                                    <param id="0" name="Comparison">4</param>
+                                                    <param id="1" name="X co-ordinate">FinalBoss.X</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions>
+                                                <action id="-10" name="Set value" sid="461448535686051" type="FinalBoss">
+                                                    <param id="0" name="Instance variable">Patrol</param>
+                                                    <param id="1" name="Value">1</param>
+                                                </action>
+                                            </actions>
+                                        </event-block>
+                                        <event-block sid="528608890436472">
+                                            <conditions>
+                                                <condition id="-6" name="Every X seconds" sid="920719177508172" type="System">
+                                                    <param id="0" name="Interval (seconds)">10.0</param>
+                                                </condition>
+                                            </conditions>
+                                            <actions />
+                                            <sub-events>
+                                                <event-block sid="677745652537120">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="459769813530575" type="Sprite">
+                                                            <param id="0" name="Comparison">2</param>
+                                                            <param id="1" name="X co-ordinate">FinalBoss.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="168582183232674" type="FinalBoss">
+                                                            <param id="0" name="Animation">&quot;AttackLeft&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="335889242942627" type="System">
+                                                            <param id="0" name="Object to create">Sprite7</param>
+                                                            <param id="1" name="Layer">1</param>
+                                                            <param id="2" name="X">FinalBoss.ImagePointX(&quot;Bullet&quot;)</param>
+                                                            <param id="3" name="Y">FinalBoss.ImagePointY(&quot;Bullet&quot;)</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="852121415783176" type="FinalBoss">
+                                                            <param id="0" name="Animation">&quot;Left&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                                <event-block sid="717640256482332">
+                                                    <conditions>
+                                                        <condition id="-1" name="Compare X" sid="967693241047579" type="Sprite">
+                                                            <param id="0" name="Comparison">4</param>
+                                                            <param id="1" name="X co-ordinate">FinalBoss.X</param>
+                                                        </condition>
+                                                    </conditions>
+                                                    <actions>
+                                                        <action id="4" name="Set animation" sid="697838515905977" type="FinalBoss">
+                                                            <param id="0" name="Animation">&quot;AttackRight&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                        <action id="-3" name="Create object" sid="189303315854072" type="System">
+                                                            <param id="0" name="Object to create">Sprite7</param>
+                                                            <param id="1" name="Layer">1</param>
+                                                            <param id="2" name="X">FinalBoss.ImagePointX(&quot;Bullet&quot;)</param>
+                                                            <param id="3" name="Y">FinalBoss.ImagePointY(&quot;Bullet&quot;)</param>
+                                                        </action>
+                                                        <action id="4" name="Set animation" sid="706814218716506" type="FinalBoss">
+                                                            <param id="0" name="Animation">&quot;Right&quot;</param>
+                                                            <param id="1" name="From">1</param>
+                                                        </action>
+                                                    </actions>
+                                                </event-block>
+                                            </sub-events>
+                                        </event-block>
+                                    </sub-events>
+                                </event-block>
+                            </sub-events>
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="790433956373947">
+                    <conditions>
+                        <condition id="0" name="On collision with another object" sid="635887648747513" type="Sprite">
+                            <param id="0" name="Object">FinalBoss</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action behavior="Flash" id="0" name="Flash" sid="240135649637946" type="Sprite">
+                            <param id="0" name="&apos;On&apos; time">0.2</param>
+                            <param id="1" name="&apos;Off&apos; time">0.2</param>
+                            <param id="2" name="Duration">1.0</param>
+                        </action>
+                        <action id="-11" name="Subtract from" sid="991947122683942" type="System">
+                            <param id="0" name="Variable">Lives</param>
+                            <param id="1" name="Value">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="666877113063023" title="Movement">
                     <sub-events>
                         <event-block sid="522584789469594">
@@ -79,30 +233,72 @@
                             </conditions>
                             <actions>
                                 <action id="4" name="Set animation" sid="662796230450776" type="Sprite">
-                                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                                    <param id="0" name="Animation">&quot;DefaultL&quot;</param>
                                     <param id="1" name="From">1</param>
                                 </action>
                             </actions>
                         </event-block>
                     </sub-events>
                 </event-group>
+                <event-block sid="120418813186140">
+                    <conditions>
+                        <condition id="0" name="On key pressed" sid="323847791257567" type="Keyboard">
+                            <param id="0" name="Key">65 (A)</param>
+                        </condition>
+                    </conditions>
+                    <actions>
+                        <action id="4" name="Set animation" sid="172672284024209" type="Sprite">
+                            <param id="0" name="Animation">&quot;attack&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                        <action id="-16" name="Wait" sid="383382520253951" type="System">
+                            <param id="0" name="Seconds">0.5</param>
+                        </action>
+                        <action id="4" name="Set animation" sid="268538828653890" type="Sprite">
+                            <param id="0" name="Animation">&quot;Default&quot;</param>
+                            <param id="1" name="From">1</param>
+                        </action>
+                    </actions>
+                </event-block>
                 <event-group description="" sid="214489036890252" title="Lives">
                     <sub-events>
-                        <event-block sid="519366786948074">
+                        <event-block any="1" sid="147373322627233">
                             <conditions>
-                                <condition id="0" name="On collision with another object" sid="589169287602394" type="Sprite">
-                                    <param id="0" name="Object">Sprite3</param>
+                                <condition id="-14" name="Compare variable" sid="832378376221322" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">2</param>
                                 </condition>
                             </conditions>
                             <actions>
-                                <action behavior="Flash" id="0" name="Flash" sid="951145005436154" type="Sprite">
-                                    <param id="0" name="&apos;On&apos; time">0.2</param>
-                                    <param id="1" name="&apos;Off&apos; time">0.2</param>
-                                    <param id="2" name="Duration">1.0</param>
-                                </action>
-                                <action id="-11" name="Subtract from" sid="203846248216505" type="System">
+                                <action id="-9" name="Destroy" sid="957152023095257" type="UIHP3" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="948487203941373">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="635822349868154" type="System">
                                     <param id="0" name="Variable">Lives</param>
-                                    <param id="1" name="Value">1</param>
+                                    <param id="1" name="Comparison">0</param>
+                                    <param id="2" name="Value">1</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="313005558639450" type="UIHP2" />
+                            </actions>
+                        </event-block>
+                        <event-block sid="128908546068980">
+                            <conditions>
+                                <condition id="-14" name="Compare variable" sid="843024575169997" type="System">
+                                    <param id="0" name="Variable">Lives</param>
+                                    <param id="1" name="Comparison">3</param>
+                                    <param id="2" name="Value">0</param>
+                                </condition>
+                            </conditions>
+                            <actions>
+                                <action id="-9" name="Destroy" sid="432047538028015" type="UIHP1" />
+                                <action id="-9" name="Set value" sid="658173911099576" type="System">
+                                    <param id="0" name="Variable">IsGameOver</param>
+                                    <param id="1" name="Value">&quot;true&quot;</param>
                                 </action>
                             </actions>
                         </event-block>
@@ -125,66 +321,6 @@
                 </event-group>
             </sub-events>
         </event-group>
-        <event-block sid="955371602184647">
-            <conditions>
-                <condition id="3" name="On key released" sid="270349944282108" type="Keyboard">
-                    <param id="0" name="Key">65 (A)</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="4" name="Set animation" sid="138417968298552" type="Sprite">
-                    <param id="0" name="Animation">&quot;attack&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-                <action id="-16" name="Wait" sid="223946509091581" type="System">
-                    <param id="0" name="Seconds">0.5</param>
-                </action>
-                <action id="4" name="Set animation" sid="885122238112178" type="Sprite">
-                    <param id="0" name="Animation">&quot;Default&quot;</param>
-                    <param id="1" name="From">1</param>
-                </action>
-            </actions>
-        </event-block>
-        <event-block any="1" sid="236170724386390">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="100344916322803" type="System">
-                    <param id="0" name="Variable">Lives</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">2</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="484934331119089" type="UIHP3" />
-            </actions>
-        </event-block>
-        <event-block sid="852622693016145">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="232379190209352" type="System">
-                    <param id="0" name="Variable">Lives</param>
-                    <param id="1" name="Comparison">0</param>
-                    <param id="2" name="Value">1</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="562679803365099" type="UIHP2" />
-            </actions>
-        </event-block>
-        <event-block sid="855874694751544">
-            <conditions>
-                <condition id="-14" name="Compare variable" sid="665907119410664" type="System">
-                    <param id="0" name="Variable">Lives</param>
-                    <param id="1" name="Comparison">3</param>
-                    <param id="2" name="Value">0</param>
-                </condition>
-            </conditions>
-            <actions>
-                <action id="-9" name="Destroy" sid="538958772719914" type="UIHP1" />
-                <action id="-9" name="Set value" sid="564832373025902" type="System">
-                    <param id="0" name="Variable">IsGameOver</param>
-                    <param id="1" name="Value">&quot;true&quot;</param>
-                </action>
-            </actions>
-        </event-block>
         <event-block sid="513753106715181">
             <conditions>
                 <condition id="-14" name="Compare variable" sid="872571751362040" type="System">
